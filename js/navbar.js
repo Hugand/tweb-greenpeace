@@ -62,7 +62,7 @@ function initNavbar(){
                 </ul>
             </li>
             <li><a href="o-que-fazemos.html">O que fazemos</a></li>
-            <li><a href="#">Eventos</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
             <li><a href="#">Recursos</a></li>
         </ul>
     `)

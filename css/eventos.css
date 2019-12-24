@@ -1,0 +1,73 @@
+@media only screen and (min-width: 740px) {
+  #eventos {
+    grid-template-columns: auto 60% auto;
+  }
+}
+@media only screen and (max-width: 740px) {
+  #eventos {
+    grid-template-columns: auto 90% auto;
+  }
+}
+#eventos {
+  height: fit-content;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #3892e4;
+  padding: 20px 0;
+  display: grid;
+  border-radius: 0 0 70% 70%/30%;
+}
+#eventos #meio {
+  grid-column: 2;
+  margin-bottom: 40px;
+}
+#eventos #meio h1 {
+  margin-top: 0;
+}
+#eventos #meio h2 {
+  font-weight: 100;
+}
+
+#content {
+  margin-top: 60px;
+}
+#content .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 70% auto;
+}
+#content .row #gallery {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  column-gap: 20px;
+}
+#content .row #gallery button {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  background: transparent;
+  font-size: 20px;
+  font-weight: normal;
+  border: 0;
+  transition: 0.3s;
+}
+#content .row #gallery button:hover {
+  font-size: 28px;
+  cursor: pointer;
+}
+#content .row #gallery #navigate-left {
+  grid-column: 1;
+}
+#content .row #gallery #curr-img {
+  grid-column: 2;
+  width: 100%;
+  object-fit: contain;
+}
+#content .row #gallery #navigate-right {
+  grid-column: 3;
+}
+
+/*# sourceMappingURL=eventos.css.map */
