@@ -1,0 +1,142 @@
+@import "colors";
+
+$viewportWidthBreakpoint: 750px;
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width: $viewportWidthBreakpoint){
+
+    .form-container{
+        position: fixed ;
+        width: 50%;
+        height: 100%;
+        background-color: $green;
+        z-index: 3;
+        .curve{
+            position: fixed;
+            transform: translateX(-50%);
+            left: 50%;
+            background-color: $green;
+            height: 100%;
+            width: 250px;
+            border-radius: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            right: 0;
+        }
+        .login-form{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 60%;
+            top: 50%;
+            
+            .header{
+                display: grid;
+                grid-template-columns: auto 400px auto;
+                grid-template-rows: auto auto;
+    
+                h1{
+                    grid-row-start: 2;
+                    grid-column-start: 2;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+    
+                .logo{
+                    grid-row-start: 1;
+                    grid-column-start: 2;
+                    position: relative;
+                    margin: auto;
+                    width: 400px;
+                    margin-bottom: 20px;
+                }
+            }
+    
+            
+        }
+    }
+
+
+    .bg{
+        position: fixed;
+        right: 0;
+        width: 60%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+    
+}
+
+@media only screen and (max-width: $viewportWidthBreakpoint){
+    .form-container{
+        
+        .login-form{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            width: 70%;
+            background-color: $green;
+            z-index: 3;
+            padding: 50px 40px;
+            border-radius: 20px;
+            
+            .header{
+                display: grid;
+                grid-template-columns: auto 95% auto;
+                grid-template-rows: auto auto;
+    
+                h1{
+                    grid-row-start: 2;
+                    grid-column-start: 2;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+    
+                .logo{
+                    grid-row-start: 1;
+                    grid-column-start: 2;
+                    position: relative;
+                    margin: auto;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+    
+            
+        }
+    }
+
+
+    .bg{
+        position: fixed;
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.overlay{
+    position: fixed;
+    background-color: $transparentBlue;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.text-link{
+    font-size: 12px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+
+    a{
+        color: $darkGreen;
+    }
+}

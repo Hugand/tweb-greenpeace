@@ -1,0 +1,341 @@
+@import "colors";
+
+$widthBreakpoint: 740px;
+$contactsBreakpointL1: 785px;
+$contactsBreakpointL2: 615px;
+
+@media only screen and (min-width: $widthBreakpoint){
+    #quem-somos{
+        grid-template-columns: auto 60% auto;
+    }
+
+    #visao{
+        grid-template-columns: auto 60% auto;
+        
+        .text{
+            padding: 0 40px;
+        }
+    }
+
+    #sign-up-row{
+        grid-template-columns: auto 40% auto;
+    }
+}
+
+@media only screen and (max-width: $widthBreakpoint){
+    #quem-somos{
+        grid-template-columns: auto 90% auto;
+    }
+
+    #visao{
+        grid-template-columns: auto 90% auto;
+        
+        .text{
+            padding: 0 20px;
+        }
+    }
+
+    #sign-up-row{
+        grid-template-columns: auto 90% auto;
+    }
+}
+
+#quem-somos{
+    margin-top: 60px;
+    background-color: $blue;
+    border-radius: 0 0 70% 70% / 30%;
+    padding: 20px 0;
+    display: grid;
+    //grid-template-columns: auto 60% auto;
+
+    #meio{
+        grid-column: 2;
+        margin: 40px 0;
+        h1{
+            margin-top:0;
+        }
+
+        h2{
+            font-weight: 100;
+        }
+    }
+}
+
+#visao{
+    padding: 20px 0;
+    display: grid;
+
+    #meio-visao{
+        grid-column: 2;
+        margin: 40px 0;
+        h1{
+            margin-top:0;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+    }
+}
+
+#sign-up-row{
+    display: grid;
+    z-index: -1 !important;
+    margin-top: 80px;
+
+    #sign-up-form{
+        grid-column: 2;
+        border-radius: 20px;
+        filter: drop-shadow(0 0 0.75rem #00000080);
+        background-color: white;
+
+        h2{
+            background-color: $green;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        #form{
+            padding: 40px 20px;
+            padding-top: 20px;
+
+            .input{
+                input{
+                    width: calc(100% - 45px);
+                    padding-left: 10px;
+                }
+            }
+
+            
+            .row{
+                height: auto;
+
+                .input{
+                    margin: 0 10px;
+                }
+
+                .input:first-child{
+                    margin-left: 0;
+                }
+
+                .input:last-child{
+                    margin-right: 0;
+                }
+    
+            }
+
+            .btn{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media only screen and(min-width: $contactsBreakpointL1){
+    #contactos-row{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: auto 70% auto;
+    
+        #contactos{
+            grid-column: 2;
+    
+            h1{
+                text-align: center;
+            }
+            
+            #content{
+                display: grid;
+                grid-template-columns: calc(50%-40px) calc(50%-40px);
+                column-gap: 20px;
+    
+                .contact-card{
+                    background-color: white;
+                    filter: drop-shadow(0 0 0.3rem #36363680);
+                    padding: 30px 20px;
+                    border-radius: 10px;
+                    width: fit-content;
+    
+                    h3{
+                        margin-top: 0;
+    
+                        button{
+                            background: transparent;
+                            border: 0;
+                            font-size: 18px;
+                            transition: .3s;
+    
+                            &:hover{
+                                font-size: 22px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                }
+    
+                #europa{
+                    grid-column: 1;
+                }
+    
+                #internacional{
+                    grid-column: 2;
+                }
+            }
+    
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+                margin-top: 20px;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 0.3rem #36363680);
+            }
+             
+        }
+    
+    }
+}
+
+
+
+@media only screen and(max-width: $contactsBreakpointL1)
+    and(min-width: $contactsBreakpointL2){
+    #contactos-row{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: auto 90% auto;
+    
+        #contactos{
+            grid-column: 2;
+    
+            h1{
+                text-align: center;
+            }
+            
+            #content{
+                display: grid;
+                grid-template-columns: calc(50%-40px) calc(50%-40px);
+                column-gap: 20px;
+    
+                .contact-card{
+                    background-color: white;
+                    filter: drop-shadow(0 0 0.3rem #36363680);
+                    padding: 30px 20px;
+                    border-radius: 10px;
+                    width: fit-content;
+    
+                    h3{
+                        margin-top: 0;
+    
+                        button{
+                            background: transparent;
+                            border: 0;
+                            font-size: 18px;
+                            transition: .3s;
+    
+                            &:hover{
+                                font-size: 22px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                }
+    
+                #europa{
+                    grid-column: 1;
+                }
+    
+                #internacional{
+                    grid-column: 2;
+                }
+            }
+    
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+                margin-top: 20px;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 0.3rem #36363680);
+            }
+             
+        }
+    
+    }
+}
+
+
+@media only screen and(max-width: $contactsBreakpointL2){
+    #contactos-row{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: auto 90% auto;
+    
+        #contactos{
+            grid-column: 2;
+    
+            h1{
+                text-align: center;
+            }
+            
+            #content{
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto;
+                row-gap: 20px;
+    
+                .contact-card{
+                    background-color: white;
+                    filter: drop-shadow(0 0 0.3rem #36363680);
+                    padding: 30px 20px;
+                    border-radius: 10px;
+                    width: fit-content;
+    
+                    h3{
+                        margin-top: 0;
+    
+                        button{
+                            background: transparent;
+                            border: 0;
+                            font-size: 18px;
+                            transition: .3s;
+    
+                            &:hover{
+                                font-size: 22px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                }
+    
+                #europa{
+                    grid-row: 1;
+                }
+    
+                #internacional{
+                    grid-row: 2;
+                }
+            }
+    
+            #map {
+                width: 100%;
+                height: 400px;
+                background-color: grey;
+                margin-top: 20px;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 0.3rem #36363680);
+            }
+             
+        }
+    
+    }
+}
