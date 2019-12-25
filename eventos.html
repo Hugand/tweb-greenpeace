@@ -14,11 +14,13 @@
 
     <div id="content">
 
-        <div id="eventos">
+        <div id="header-container">
+            <div id="bg"></div>
             <div id="meio" class="flex-display flex-vert">
                 <h1>
                     Eventos
                 </h1>
+                <div class="hr"></div>
                 <p>
                     O Greenpeace é conhecido por seus protestos em todo o mundo. 
                     É claro que eles também participam de conferências internacionais, 
@@ -38,22 +40,23 @@
                 </p>
             </div>
         </div>
-        <div>
-            <p>
-            </p>
-        </div>
 
         <div class="row">
 
             <div id="gallery">
-                <button id="navigate-left"><i class="fa fa-angle-left"></i></button>
                 
-                <div class="flex-display flex-vert">
+                <div id="img" class="flex-display flex-vert">
                     <img id="curr-img" src="img/galeria/soy_deforestation.jpg"/>
                     <div id="bottom-nav" class="flex-display"></div>
                 </div>
 
+                <button id="navigate-left"><i class="fa fa-angle-left"></i></button>
                 <button id="navigate-right"><i class="fa fa-angle-right"></i></button>
+
+                <div id="navigation-btns" class="flex-display">
+                    <button id="navigate-left-mobile"><i class="fa fa-angle-left"></i></button>
+                    <button id="navigate-right-mobile"><i class="fa fa-angle-right"></i></button>
+                </div>
             </div>
     
         </div>

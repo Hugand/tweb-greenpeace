@@ -11,41 +11,74 @@ const timing = 5000
 
 const leftBtn = $('#navigate-left')
 const rightBtn = $('#navigate-right')
+const mobileLeftBtn = $('#navigate-left-mobile')
+const mobileRightBtn = $('#navigate-right-mobile')
 
-createBottomNav()
+let navElements = createBottomNav()
+console.log(navElements)
 setNewGalleryImage(galleryElement, currPos)
-
 setInterval(()=>{
-    currPos++
-    setNewGalleryImage(galleryElement, currPos)
+    navigateRight()
 }, timing)
 
 leftBtn.click(function(){
+    navigateLeft()
+})
+
+rightBtn.click(function(){
+    navigateRight()
+})
+
+mobileLeftBtn.click(function(){
+    navigateLeft()
+})
+
+mobileRightBtn.click(function(){
+    navigateRight()
+})
+
+function navigateLeft(){
+    navElements[currPos].classList.remove("selected")
     if(currPos > 0)
         currPos--
     else
         currPos = gallery.length-1
+    navElements[currPos].classList.add("selected")
     setNewGalleryImage(galleryElement, currPos)
-})
+}
 
-rightBtn.click(function(){
+function navigateRight(){
+    navElements[currPos].classList.remove("selected")
     if(currPos < gallery.length-1)
         currPos++
     else
         currPos = 0
+    navElements[currPos].classList.add("selected")
     setNewGalleryImage(galleryElement, currPos)
-})
+}
 
 function setNewGalleryImage(galleryElement, index){
-    galleryElement.attr('src', gallery[index])
+    galleryElement.animate({
+        opacity: 0
+    }, ()=>{
+        galleryElement.attr('src', gallery[index])
+        galleryElement.animate({
+            opacity: 1
+        })
+    })
 }
 
 function createBottomNav(){
-    for(i = 0; i < gallery.length; i++){
+    for(let i = 0; i < gallery.length; i++){
         $("#bottom-nav").append(`
-            <div style="width: 10px; height: 10px;
-            background-color: #999; border-radius: 100%;
-            margin: 5px 2px"></div>
+            <div `+((i == 0) ? `class="selected"` : "")+`></div>
         `)
+        $($("#bottom-nav").children()[i]).click(function(){
+            $("#bottom-nav").children()[currPos].classList.remove("selected")
+            currPos = i
+            $("#bottom-nav").children()[currPos].classList.add("selected")
+            setNewGalleryImage(galleryElement, currPos)
+        })
     }
+    return $('#bottom-nav').children()
 }

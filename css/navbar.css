@@ -128,7 +128,7 @@
   nav ul .sub-item a:hover {
     font-weight: bold;
     background: #62c251;
-    border-bottom: 6px solid #3892e4;
+    border-bottom: 6px solid #71b3f0;
     cursor: pointer;
   }
   nav ul .sub-item button {
@@ -157,7 +157,7 @@
   nav ul li > a:hover {
     font-weight: bold;
     background: #62c251;
-    border-bottom: 6px solid #3892e4;
+    border-bottom: 6px solid #71b3f0;
     cursor: pointer;
   }
   nav ul li > a:hover ~ .submenu {
