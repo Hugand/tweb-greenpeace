@@ -9,7 +9,8 @@ $navbarWidthBreakpoint: 740px;
         height: 60px;
         top: 0;
         left: 0;
-        background-color: $green;
+        //background-color: $green;
+        background: linear-gradient(45deg, $greenishBlue, $green);
         display: grid !important;
         grid-template-columns: 20px 200px auto 50px 20px;
         filter: drop-shadow(0 0 0.75rem #00000080);
@@ -52,7 +53,7 @@ $navbarWidthBreakpoint: 740px;
             height: fit-content;
             flex-direction: column !important;
             list-style-type: none;
-            background-color: $green;
+            background-color: $greenishBlue;
             border-bottom-left-radius: 10px;
             transform-origin:  top;
             border-bottom-right-radius: 10px;
@@ -67,13 +68,13 @@ $navbarWidthBreakpoint: 740px;
                 transform-origin: right;
                 transform: scaleX(0);
                 li{
-                    background-color: $green;
+                    background-color: $greenishBlue;
                 }
             }
 
             li{
                 a{
-                    color: white;
+                    color: #444;
                     line-height: 30px;
                     text-decoration: none;
                     float: right;
@@ -114,7 +115,8 @@ $navbarWidthBreakpoint: 740px;
         height: 60px;
         top: 0;
         left: 0;
-        background-color: $green;
+        //background-color: $green;
+        background: linear-gradient(45deg, $greenishBlue, $green);
         padding: 0px 20px;
         filter: drop-shadow(0 0 0.2rem #16161680);
     
@@ -143,13 +145,14 @@ $navbarWidthBreakpoint: 740px;
                     padding: 0px 10px;
                     transition: .3s;
                     line-height: 60px;
-                    color: white;
+                    color: #444;
                     text-align: center;
 
                     &:hover{
                         font-weight: bold;
-                        background: darken($color: $green, $amount: 10);
-                        border-bottom: 6px solid $blue;
+                        background: linear-gradient(90deg, transparent, $green);
+                        //background: darken($color: $green, $amount: 10);
+                        //border-bottom: 6px solid $blue;
                         cursor: pointer;
                     }
                 }
@@ -164,7 +167,7 @@ $navbarWidthBreakpoint: 740px;
                     padding-left: 0;
     
                     li{
-                        background-color: $green;
+                        background-color: $greenishBlue;
                         height: fit-content;
                     }
                     
@@ -180,12 +183,12 @@ $navbarWidthBreakpoint: 740px;
                 padding: 0px 10px;
                 transition: .3s;
                 line-height: 60px;
-                color: white;
+                color: #444;
     
                 &:hover{
                     font-weight: bold;
-                    background: darken($color: $green, $amount: 10);
-                    border-bottom: 6px solid $blue;
+                    //background: darken($color: $green, $amount: 10);
+                    //border-bottom: 6px solid $blue;
                     cursor: pointer;
                 }
 

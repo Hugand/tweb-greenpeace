@@ -8,14 +8,14 @@ body {
     position: fixed;
     width: 50%;
     height: 100%;
-    background-color: #84cf77;
+    background-color: #CBE54E;
     z-index: 3;
   }
   .form-container .curve {
     position: fixed;
     transform: translateX(-50%);
     left: 50%;
-    background-color: #84cf77;
+    background-color: #CBE54E;
     height: 100%;
     width: 250px;
     border-radius: 100%;
@@ -65,7 +65,7 @@ body {
     left: 50%;
     top: 50%;
     width: 70%;
-    background-color: #84cf77;
+    background-color: #CBE54E;
     z-index: 3;
     padding: 50px 40px;
     border-radius: 20px;
