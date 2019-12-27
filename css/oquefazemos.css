@@ -39,7 +39,7 @@
 }
 @media only screen and (min-width: 620px) {
   .container-right {
-    margin: 40px 20px;
+    margin: 100px 0px;
     display: grid;
     grid-template-columns: 25% 25% 25% auto;
     grid-template-rows: 20px auto 20px;
@@ -55,7 +55,6 @@
   .container-right #cont {
     grid-row-start: 1;
     grid-row-end: 4;
-    background: linear-gradient(45deg, #3B5284, #5BA8A0);
     width: 100%;
     grid-column: 2;
     padding: 40px;
@@ -69,11 +68,11 @@
     text-align: right;
     font-weight: 300;
     line-height: 24px;
-    text-justify: justify;
+    text-align: justify;
   }
 
   .container-left {
-    margin: 40px 20px;
+    margin: 100px 0px;
     display: grid;
     grid-template-columns: 25% 25% 25% auto;
     grid-template-rows: 20px auto 20px;
@@ -99,12 +98,12 @@
   .container-left #cont p {
     font-weight: 300;
     line-height: 24px;
-    text-justify: justify;
+    text-align: justify;
   }
 }
 @media only screen and (max-width: 620px) {
   .container-right, .container-left {
-    margin: 40px 20px;
+    margin: 60px 20px;
     display: grid;
     grid-template-columns: auto 95% auto;
     grid-template-rows: auto 400px;
@@ -128,7 +127,7 @@
   .container-right #cont p, .container-left #cont p {
     font-weight: 300;
     line-height: 24px;
-    text-justify: justify;
+    text-align: justify;
   }
 }
 #header-container {
@@ -165,9 +164,11 @@
 }
 #header-container #meio #header-content h2 {
   font-weight: 400;
+  text-align: justify;
 }
 #header-container #meio #header-content p {
   font-weight: 100;
+  text-align: justify;
 }
 #header-container #meio img {
   grid-column: 2;

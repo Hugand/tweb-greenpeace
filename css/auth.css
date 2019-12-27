@@ -5,34 +5,25 @@ body {
 
 @media only screen and (min-width: 750px) {
   .form-container {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto 50% auto;
     position: fixed;
-    width: 50%;
+    width: 60%;
     height: 100%;
-    background-color: #CBE54E;
     z-index: 3;
-  }
-  .form-container .curve {
-    position: fixed;
-    transform: translateX(-50%);
-    left: 50%;
-    background-color: #CBE54E;
-    height: 100%;
-    width: 250px;
-    border-radius: 100%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    right: 0;
+    background: linear-gradient(45deg, #5BA8A0, #CBE54E);
+    border-radius: 0 30% 30% 0/70%;
   }
   .form-container .login-form {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 60%;
-    top: 50%;
+    grid-column: 2;
+    grid-row: 2;
   }
   .form-container .login-form .header {
     display: grid;
-    grid-template-columns: auto 400px auto;
+    grid-template-columns: auto 100% auto;
     grid-template-rows: auto auto;
+    grid-column: 2;
   }
   .form-container .login-form .header h1 {
     grid-row-start: 2;
@@ -46,7 +37,7 @@ body {
     grid-column-start: 2;
     position: relative;
     margin: auto;
-    width: 400px;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -65,7 +56,7 @@ body {
     left: 50%;
     top: 50%;
     width: 70%;
-    background-color: #CBE54E;
+    background: linear-gradient(45deg, #5BA8A0, #CBE54E);
     z-index: 3;
     padding: 50px 40px;
     border-radius: 20px;

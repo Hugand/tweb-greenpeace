@@ -247,7 +247,7 @@ body {
   top: -30px;
   left: 5px;
 }
-.input input {
+.input input, .input select {
   width: calc(100% - 70px);
   height: 100%;
   background: transparent;
@@ -257,18 +257,18 @@ body {
   border-bottom: 1px solid black;
   padding: 0px 35px;
 }
-.input input:invalid {
+.input input:invalid, .input select:invalid {
   box-shadow: none;
   border-bottom: 2px solid #c34040;
 }
-.input input:not(:placeholder-shown) ~ label {
+.input input:not(:placeholder-shown) ~ label, .input select:not(:placeholder-shown) ~ label {
   top: -60px;
   font-size: 12px;
 }
 
 .btn {
   width: 100%;
-  background: #3B5284;
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
   color: white;
   padding: 10px 0px;
   border: 0;
@@ -280,6 +280,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   background-color: #256bbb;
+  filter: drop-shadow(0 5px 0.1rem #36363640);
 }
 
 /*# sourceMappingURL=general.css.map */

@@ -82,7 +82,8 @@ $contactsBreakpointL2: 615px;
 #header-container{
     margin-top: 60px;
     display: grid;
-    background: linear-gradient(45deg, $blue, $greenishBlue);
+    background: linear-gradient(45deg, $blueTrans, $greenishBlueTrans), url(../img/iceBoat.jpg);
+    background-size: cover;
     //border-radius: 0 0 70% 70% / 30%;
 
     #meio{
@@ -110,12 +111,12 @@ $contactsBreakpointL2: 615px;
 
         h2{
             font-weight: $bold;
-            text-align: right
+            text-align: justify
         }
 
         p{
             font-weight: $thin;
-            text-align: right;
+            text-align: justify;
         }
     }
     
@@ -138,7 +139,7 @@ $contactsBreakpointL2: 615px;
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 6;
-        background: linear-gradient(45deg, $blue, $greenishBlue);
+        background: linear-gradient(45deg, $blue, $greenishBlue), url(../img/iceBoat.jpg);
     }
     #meio-visao{
         //background-color: white;
@@ -183,7 +184,7 @@ $contactsBreakpointL2: 615px;
         background-color: white;
 
         h2{
-            background-color: $green;
+            background: linear-gradient(45deg, $blue, $greenishBlue);
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             text-align: center;
@@ -223,6 +224,7 @@ $contactsBreakpointL2: 615px;
 
             .btn{
                 margin-top: 30px;
+                background: linear-gradient(45deg, $blue, $greenishBlue);
             }
         }
     }

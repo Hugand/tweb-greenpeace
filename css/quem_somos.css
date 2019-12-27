@@ -63,7 +63,8 @@
 #header-container {
   margin-top: 60px;
   display: grid;
-  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+  background: linear-gradient(45deg, #3B5284f0, #5BA8A0f0), url(../img/iceBoat.jpg);
+  background-size: cover;
 }
 #header-container #meio {
   grid-column: 2;
@@ -87,11 +88,11 @@
 }
 #header-container #meio h2 {
   font-weight: 600;
-  text-align: right;
+  text-align: justify;
 }
 #header-container #meio p {
   font-weight: 100;
-  text-align: right;
+  text-align: justify;
 }
 #header-container .hr {
   background-color: white;
@@ -111,7 +112,7 @@
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 6;
-  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+  background: linear-gradient(45deg, #3B5284, #5BA8A0), url(../img/iceBoat.jpg);
 }
 #visao #meio-visao {
   grid-column-start: 2;
@@ -150,7 +151,7 @@
   background-color: white;
 }
 #sign-up-row #sign-up-form h2 {
-  background-color: #CBE54E;
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   text-align: center;
@@ -180,6 +181,7 @@
 }
 #sign-up-row #sign-up-form #form .btn {
   margin-top: 30px;
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
 }
 
 @media only screen and (min-width: 785px) {

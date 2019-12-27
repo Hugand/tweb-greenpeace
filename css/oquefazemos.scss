@@ -48,7 +48,7 @@
 @media only screen and (min-width: 620px){
     
     .container-right{
-        margin: 40px 20px;
+        margin: 100px 0px;
         display: grid;
         grid-template-columns: 25% 25% 25% auto;
         grid-template-rows: 20px auto 20px;
@@ -65,7 +65,6 @@
         #cont{
             grid-row-start: 1;
             grid-row-end: 4;
-            background: linear-gradient(45deg, $blue, $greenishBlue);
             width: 100%;
             grid-column: 2;
             padding: 40px;
@@ -81,14 +80,14 @@
                 text-align: right;
                 font-weight: $light;
                 line-height: 24px;
-                text-justify: justify;
+                text-align: justify;
             }
         }
         
     }
     
     .container-left{
-        margin: 40px 20px;
+        margin: 100px 0px;
         display: grid;
         grid-template-columns: 25% 25% 25% auto;
         grid-template-rows: 20px auto 20px;
@@ -115,7 +114,7 @@
             p{
                 font-weight: $light;
                 line-height: 24px;
-                text-justify: justify;
+                text-align: justify;
             }
         }
         
@@ -125,7 +124,7 @@
 @media only screen and (max-width: 620px){
     
     .container-right, .container-left{
-        margin: 40px 20px;
+        margin: 60px 20px;
         display: grid;
         grid-template-columns: auto 95% auto;
         grid-template-rows: auto 400px;
@@ -150,7 +149,7 @@
             p{
                 font-weight: $light;
                 line-height: 24px;
-                text-justify: justify;
+                text-align: justify;
             }
         }
         
@@ -195,10 +194,12 @@
 
             h2{
                 font-weight: $regular;
+                text-align: justify;
             }
 
             p{
                 font-weight: $thin;
+                text-align: justify;
             }
         }
 

@@ -27,7 +27,43 @@
   .row #gallery #navigation-btns {
     display: none;
   }
+
+  #header-container {
+    grid-template-columns: auto 70% auto;
+    grid-template-rows: 10vh 70vh 30vh;
+  }
+  #header-container #bg {
+    border-radius: 0 0 70% 70%/30%;
+  }
 }
+#header-container {
+  display: grid;
+}
+#header-container #bg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: linear-gradient(45deg, #3B5284f0, #5BA8A0f0), url(../img/visaoImg.png);
+}
+#header-container #meio {
+  grid-column: 2;
+  grid-row: 2;
+  color: white;
+  padding-bottom: 100px;
+}
+#header-container #meio .hr {
+  background-color: white;
+}
+#header-container #meio h1 {
+  font-weight: 800;
+}
+#header-container #meio p {
+  font-weight: 100;
+  text-align: justify;
+  line-height: 24px;
+}
+
 @media only screen and (max-width: 740px) {
   .row {
     grid-template-columns: auto 95% auto;
@@ -52,6 +88,14 @@
   }
   .row #gallery #navigation-btns button {
     width: 50%;
+  }
+
+  #header-container {
+    grid-template-columns: auto 90% auto;
+    grid-template-rows: 10vh auto 30vh;
+  }
+  #header-container #bg {
+    border-radius: 0 0 70% 70%/10%;
   }
 }
 #content {
@@ -105,6 +149,80 @@
   width: 12px;
   height: 12px;
   background-color: #fff;
+}
+
+.event-suggestion-row {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+}
+.event-suggestion-row #meio {
+  grid-column: 2;
+}
+.event-suggestion-row #meio h3 {
+  text-align: center;
+}
+.event-suggestion-row #meio .btn {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 200px;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1000%;
+  z-index: 6;
+}
+#modal #modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #292f36d0;
+}
+#modal #form-container {
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+  background-color: white;
+  border-radius: 20px;
+  height: fit-content;
+  transform-origin: center;
+  transition: 0.3s;
+  transform: scale(0);
+}
+#modal #form-container h2 {
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+  width: calc(100% - 40px);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  color: white;
+}
+#modal #form-container .input input {
+  width: calc(100% - 45px);
+  padding-left: 10px;
+}
+#modal #form-container #inputs {
+  margin: 40px;
+}
+#modal #form-container #inputs .row .input {
+  margin: 10px 10px;
+}
+#modal #form-container #inputs .row .input:first-child {
+  margin-left: 0px;
+}
+#modal #form-container #inputs .row .input:last-child {
+  margin-right: 0px;
+}
+#modal #form-container #inputs .btn {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=eventos.css.map */
