@@ -213,7 +213,7 @@ $widthBreakpoint: 740px;
     top: 0;
     left: 0;
     width: 0%;
-    height: 1000%;
+    height: 100vh;
     z-index: 6;
     
     #modal-bg{
@@ -223,14 +223,14 @@ $widthBreakpoint: 740px;
     }
 
     #form-container{
-        position: fixed;
+        position: absolute;
+        transform-origin: center;
         top: 10%;
         left: 15%;
         width: 70%;
         background-color: white;
         border-radius: 20px;
-        height: fit-content;
-        transform-origin: center;
+        height: 80%;
         transition: .3s;
         transform: scale(0);
         
@@ -255,6 +255,8 @@ $widthBreakpoint: 740px;
 
         #inputs{
             margin: 40px;
+            overflow-y: auto;
+            overflow-x: none;
 
             .row{
                 .input{

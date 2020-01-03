@@ -1,4 +1,5 @@
 initNavbar() // IMPORTANTE: Executar esta funcao no início do codigo para os event listeners funcionarem
+initFooter()
 
 const navbar = document.getElementById("navbar")
 const toggleMenuBtn = navbar.children[1]
@@ -65,5 +66,20 @@ function initNavbar(){
             <li><a href="eventos.html">Eventos</a></li>
             <li><a href="#">Recursos</a></li>
         </ul>
+    `)
+}
+
+function initFooter(){
+    $('#footer').html(`
+        <p id="navs">
+            <a href="quem-somos.html">Quem somos?</a> / <a href="o-que-fazemos.html">O que fazemos?</a> / <a href="eventos.html">Eventos</a> / <a href="#">Recursos</a>
+        </p>
+        <div id="info">
+            <img src="img/greenpeace_logo.png"/>
+            <p>
+                Hugo Gomes a2019136085<br>
+                João Carvalho a2019131769
+            </p>
+        </div>
     `)
 }

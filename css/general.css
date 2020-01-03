@@ -87,6 +87,46 @@
   nav ul .sub-item div a {
     grid-column: 2;
   }
+
+  footer {
+    background: linear-gradient(45deg, #2b3c61, #488881);
+    padding: 10px;
+    margin: 0;
+    margin-top: 60px;
+    color: white;
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+  footer #navs {
+    grid-row: 1;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+  }
+  footer #navs a {
+    margin: 0 20px;
+    color: white;
+    outline: none;
+  }
+  footer #navs a:hover {
+    font-weight: 600;
+  }
+  footer #info {
+    grid-row: 2;
+    margin-top: 40px;
+  }
+  footer #info img {
+    width: 40%;
+    opacity: 70%;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  footer #info p {
+    text-align: center;
+    opacity: 50%;
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 740px) {
   nav {
@@ -160,6 +200,39 @@
   }
   nav ul li > a:hover ~ .submenu {
     transform: scaleY(1);
+  }
+
+  footer {
+    background: linear-gradient(45deg, #2b3c61, #488881);
+    padding: 40px;
+    margin: 0;
+    margin-top: 60px;
+    color: white;
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  footer #navs {
+    grid-column: 1;
+    vertical-align: middle;
+  }
+  footer #navs a {
+    margin: 0 20px;
+    color: white;
+    outline: none;
+  }
+  footer #navs a:hover {
+    font-weight: 600;
+  }
+  footer #info {
+    grid-column: 2;
+  }
+  footer #info img {
+    width: 100%;
+    opacity: 70%;
+  }
+  footer #info p {
+    text-align: right;
+    opacity: 50%;
   }
 }
 body {

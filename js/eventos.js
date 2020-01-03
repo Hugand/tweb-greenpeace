@@ -22,6 +22,20 @@ console.log(navElements)
 setNewGalleryImage(galleryElement, currPos)
 let timer = setInterval(navigateRight, timing)
 
+$("#form-container").submit(function(event){
+    event.preventDefault()
+
+    const formData = parseFormData(this)
+
+    alert(`
+        Nome: ${formData.nome}\n
+        Email: ${formData.email}\n
+        Morada: ${formData.morada}\n
+        Codigo-postal: ${formData.codPostal}   Localidade: ${formData.localidade}\n
+        Motivo: ${formData.descEvento}
+    `)
+})
+
 leftBtn.click(function(){
     navigateLeft()
     timer = resetTimer(timer, timing)
@@ -101,4 +115,14 @@ function createBottomNav(){
         })
     }
     return $('#bottom-nav').children()
+}
+
+function parseFormData(form){
+    let parsedData = {}
+
+    for(let i = 0; i < form.length; i++){
+        parsedData[form[i].name] = form[i].value
+    }
+
+    return parsedData
 }

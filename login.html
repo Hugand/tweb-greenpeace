@@ -11,28 +11,34 @@
 </head>
 <body>
     <div class="form-container">
-        <form class="login-form">
+        <form class="login-form" id="login-form" method="POST">
             <div class="header flex-display flex-vert">
                 <img class="logo" src="img/greenpeace_logo.png"/>
                 <h1>Login</h1>
             </div>
 
             <div class="input">
-                <input type="email" name="email" placeholder=""/>
+                <input type="email" name="email" placeholder="" id="email"/>
                 <img class="icon" src="img/email_icon.png"/>
                 <label>Email</label>
             </div>
             <div class="input">
-                <input type="password" name="password" placeholder=""/>
+                <input type="password" name="password" placeholder="" id="password"/>
                 <img class="icon" src="img/password_icon.svg"/>
                 <label>Password</label>
             </div>
 
-            <input type="submit" class="btn" value="Login"/>
+            <input type="submit" class="btn" value="Login" id="login-btn"/>
             <label class="text-link"><a href="register.html">Ainda não tem uma conta? Registe-se agora</a></label>
         </form>
     </div>
     <div class="overlay"></div>
     <img class="bg" src="img/login_bg.jpg"/>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous" defer></script>
+    <script src="js/authenticate.js" defer></script>
 </body>
 </html>

@@ -173,7 +173,7 @@
   top: 0;
   left: 0;
   width: 0%;
-  height: 1000%;
+  height: 100vh;
   z-index: 6;
 }
 #modal #modal-bg {
@@ -182,14 +182,14 @@
   background-color: #292f36d0;
 }
 #modal #form-container {
-  position: fixed;
+  position: absolute;
+  transform-origin: center;
   top: 10%;
   left: 15%;
   width: 70%;
   background-color: white;
   border-radius: 20px;
-  height: fit-content;
-  transform-origin: center;
+  height: 80%;
   transition: 0.3s;
   transform: scale(0);
 }
@@ -211,6 +211,8 @@
 }
 #modal #form-container #inputs {
   margin: 40px;
+  overflow-y: auto;
+  overflow-x: none;
 }
 #modal #form-container #inputs .row .input {
   margin: 10px 10px;
