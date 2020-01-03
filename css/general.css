@@ -156,7 +156,7 @@
     margin: 0;
   }
   nav ul .sub-item a {
-    width: fit-content;
+    width: calc(100% - 20px);
     text-decoration: none;
     display: block;
     margin: 0px;
@@ -168,7 +168,6 @@
   }
   nav ul .sub-item a:hover {
     font-weight: bold;
-    background: linear-gradient(90deg, transparent, #CBE54E);
     cursor: pointer;
   }
   nav ul .sub-item button {
@@ -176,10 +175,11 @@
     width: 0;
   }
   nav ul .sub-item .submenu {
-    width: fit-content;
+    width: 100%;
     transform-origin: top;
     transform: scaleY(0);
     padding-left: 0;
+    padding-right: 0;
   }
   nav ul .sub-item .submenu li {
     background-color: #5BA8A0;
@@ -189,7 +189,7 @@
     text-decoration: none;
     display: block;
     margin: 0px;
-    padding: 0px 10px;
+    padding: 0px 30px;
     transition: 0.3s;
     line-height: 60px;
     color: #444;
@@ -321,7 +321,6 @@ body {
   left: 5px;
 }
 .input input, .input select {
-  width: calc(100% - 70px);
   height: 100%;
   background: transparent;
   border: 0;
@@ -337,6 +336,12 @@ body {
 .input input:not(:placeholder-shown) ~ label, .input select:not(:placeholder-shown) ~ label {
   top: -60px;
   font-size: 12px;
+}
+.input input {
+  width: calc(100% - 70px);
+}
+.input select {
+  width: 100%;
 }
 
 .btn {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/recursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar" class="flex-display"></nav>
+    <div id="content">
+        <h1 id="title">Relatórios Anuais</h1>
+
+        <div id="slider-container">
+            <div class="anos">
+                <span id="ano1">1994</span><span id="ano2">2018</span>
+            </div>
+            <div class="range">
+                <input type="range" min="1994" max="2018" value="0" class="slider">
+                <span id="anobolha">1994</span>
+            </div>
+        </div>
+        <div id="relatorio"></div>
+        <div id="pdf"></div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/dadosRecursos.js" defer></script>
+    <script src="js/slider.js" defer></script>
+</body>
+</html>

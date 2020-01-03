@@ -76,32 +76,32 @@
 
             <div id="inputs">
                 <div class="input">
-                    <input type="text" name="nome" placeholder=" "/>
+                    <input required type="text" name="nome" placeholder=" "/>
                     <label>Nome</label>
                 </div>
 
                 <div class="input">
-                    <input type="email" name="email" placeholder=" "/>
+                    <input required type="email" name="email" placeholder=" "/>
                     <label>Email</label>
                 </div>
 
                 <div class="input">
-                    <input type="text" name="morada" placeholder=" "/>
+                    <input required type="text" name="morada" placeholder=" "/>
                     <label>Morada</label>
                 </div>
                 <div class="flex-display row">
                     <div class="input">
-                        <input type="text" name="cod-postal" placeholder=" "/>
+                        <input required type="text" name="cod-postal" pattern="[0-9]{4}[\-]?[0-9]{3}" placeholder=" "/>
                         <label>Código Postal</label>
                     </div>
                     <div class="input">
-                        <input type="text" name="localidade" placeholder=" "/>
+                        <input required type="text" name="localidade" placeholder=" "/>
                         <label>Localidade</label>
                     </div>
                 </div>
 
                 <div class="input-textarea">
-                    <textarea placeholder=" " name="descEvento"></textarea>
+                    <textarea required placeholder=" " name="descEvento"></textarea>
                     <label>Descrição do evento</label>
                 </div>
 

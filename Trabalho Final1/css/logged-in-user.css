@@ -1,0 +1,21 @@
+body {
+  background: url(../img/logged_bg.png), #488881 !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+#content {
+  background: linear-gradient(45deg, #5BA8A0, #CBE54E);
+  width: fit-content;
+  padding: 40px;
+  height: fit-content;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 0.7rem #00000080);
+  text-align: center;
+}
+
+/*# sourceMappingURL=logged-in-user.css.map */

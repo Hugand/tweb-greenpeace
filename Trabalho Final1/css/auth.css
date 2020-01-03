@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+  .form-container {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto 50% auto;
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(45deg, #5BA8A0, #CBE54E);
+    border-radius: 0 30% 30% 0/70%;
+  }
+  .form-container .login-form {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .form-container .login-form .header {
+    display: grid;
+    grid-template-columns: auto 100% auto;
+    grid-template-rows: auto auto;
+    grid-column: 2;
+  }
+  .form-container .login-form .header h1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .form-container .login-form .header .logo {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bg {
+    position: fixed;
+    right: 0;
+    width: 60%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .form-container .login-form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    background: linear-gradient(45deg, #5BA8A0, #CBE54E);
+    z-index: 3;
+    padding: 50px 40px;
+    border-radius: 20px;
+  }
+  .form-container .login-form .header {
+    display: grid;
+    grid-template-columns: auto 95% auto;
+    grid-template-rows: auto auto;
+  }
+  .form-container .login-form .header h1 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .form-container .login-form .header .logo {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bg {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+}
+.overlay {
+  position: fixed;
+  background-color: #3892e480;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+.text-link {
+  font-size: 12px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+.text-link a {
+  color: #1b5319;
+}
+
+/*# sourceMappingURL=auth.css.map */

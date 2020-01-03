@@ -19,52 +19,52 @@
             <h2>Queres fazer parte da nossa equipa?<br/>Inscreve-te!</h2>
             <form id="form">
                 <div class="input">
-                    <input type="text" name="nome" placeholder=" "/>
+                    <input required type="text" name="nome" placeholder=" "/>
                     <label>Nome</label>
                 </div>
                 <div class="flex-display row">
                     <div class="input">
-                        <input type="text" name="nif" placeholder=" "/>
+                        <input required type="text" pattern="[0-9]+" name="nif" placeholder=" "/>
                         <label>NIF</label>
                     </div>
 
                     <div class="input">
-                        <input type="text" name="sexo" placeholder=" "/>
-                        <!--<select aria-placeholder=" ">
+                        <!--<input required type="text" name="sexo" placeholder=" "/>-->
+                        <select name="sexo">
                             <option value="m">Masculino</option>
                             <option value="f">Feminino</option>
-                        </select>-->
+                        </select>
                         <label>Sexo</label>
                     </div>
                 </div>
 
                 <div class="input">
-                    <input type="text" name="idade" placeholder=" "/>
+                    <input required type="number" name="idade" placeholder=" "/>
                     <label>Idade</label>
                 </div>
 
                 <div class="input">
-                    <input type="email" name="email" placeholder=" "/>
+                    <input required type="email" name="email" placeholder=" "/>
                     <label>Email</label>
                 </div>
 
                 <div class="input">
-                    <input type="text" name="morada" placeholder=" "/>
+                    <input required type="text" name="morada" placeholder=" "/>
                     <label>Morada</label>
                 </div>
                 <div class="flex-display row">
                     <div class="input">
-                        <input type="text" name="codPostal" placeholder=" "/>
+                        <input required type="text" name="codPostal" pattern="[0-9]{4}[\-]?[0-9]{3}" placeholder=" "/>
                         <label>Código Postal</label>
                     </div>
                     <div class="input">
-                        <input type="text" name="localidade" placeholder=" "/>
+                        <input required type="text" name="localidade" placeholder=" "/>
                         <label>Localidade</label>
                     </div>
                 </div>
 
                 <div class="input-textarea">
-                    <textarea placeholder=" " name="motivo"></textarea>
+                    <textarea required placeholder=" " name="motivo"></textarea>
                     <label>Motivo</label>
                 </div>
     

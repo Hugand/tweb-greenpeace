@@ -64,7 +64,7 @@ function initNavbar(){
             </li>
             <li><a href="o-que-fazemos.html">O que fazemos</a></li>
             <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="#">Recursos</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
         </ul>
     `)
 }
@@ -72,7 +72,7 @@ function initNavbar(){
 function initFooter(){
     $('#footer').html(`
         <p id="navs">
-            <a href="quem-somos.html">Quem somos?</a> / <a href="o-que-fazemos.html">O que fazemos?</a> / <a href="eventos.html">Eventos</a> / <a href="#">Recursos</a>
+            <a href="quem-somos.html">Quem somos?</a> / <a href="o-que-fazemos.html">O que fazemos?</a> / <a href="eventos.html">Eventos</a> / <a href="recursos.html">Recursos</a>
         </p>
         <div id="info">
             <img src="img/greenpeace_logo.png"/>

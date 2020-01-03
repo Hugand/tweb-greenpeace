@@ -6,17 +6,8 @@ $contactsBreakpointL1: 785px;
 $contactsBreakpointL2: 615px;
 
 @media only screen and (min-width: $widthBreakpoint){
-    #content{
-        display: grid;
-        grid-template-rows: 130vh 10vh auto;
-        grid-template-columns: 100%;
-    }
-
     #header-container{
-        display: grid;
         grid-template-columns: auto 70% auto;
-        grid-row-start: 1;
-        grid-row-end: 3;
         grid-column: 1;
         grid-template-rows: 20vh 80vh 30vh 10vh;
 
@@ -24,7 +15,6 @@ $contactsBreakpointL2: 615px;
             grid-row: 2;
             grid-template-columns: auto 40%;
             column-gap: 70px;
-            height: fit-content;
     
             #header-content{
                 height: fit-content;
@@ -40,7 +30,6 @@ $contactsBreakpointL2: 615px;
     }
 
     #visao{
-        //grid-template-columns: auto 60% auto;
         grid-column: 1;
         grid-row: 3;
         grid-template-columns: auto 15% 15% 15% 15% auto;
@@ -51,22 +40,14 @@ $contactsBreakpointL2: 615px;
     }
 
     #sign-up-row{
-        grid-template-columns: auto 40% auto;
+        grid-template-columns: auto 60% auto;
     }
 }
 
 @media only screen and (max-width: $widthBreakpoint){
-    #content{
-        display: grid;
-        grid-template-rows: 130vh 10vh auto;
-        grid-template-columns: 100%;
-        margin-top: 60px;
-    }
 
     #header-container{
         grid-template-columns: auto 90% auto;
-        grid-row-start: 1;
-        grid-row-end: 3;
         padding-top: 80px;
         
         #meio{
@@ -88,7 +69,6 @@ $contactsBreakpointL2: 615px;
     }
     
     #visao{
-        //grid-template-columns: auto 90% auto;
         grid-template-columns: auto 22% 22% 22% 22% auto;
         
         .text{
@@ -101,12 +81,19 @@ $contactsBreakpointL2: 615px;
     }
 }
 
-#header-container{
-    //margin-top: 60px;
+#content{
     display: grid;
+    grid-template-rows: 130vh 10vh auto;
+    grid-template-columns: 100%;
+    margin-top: 60px;
+}
+
+#header-container{
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 3;
     background: linear-gradient(45deg, $blueTrans, $greenishBlueTrans), url(../img/iceBoat.jpg);
     background-size: cover;
-    //border-radius: 0 0 70% 70% / 30%;
 
     #meio{
         grid-column: 2;
@@ -162,11 +149,10 @@ $contactsBreakpointL2: 615px;
         grid-row-end: 6;
         background: linear-gradient(45deg, $blue, $greenishBlue), url(../img/iceBoat.jpg);
     }
+
     #meio-visao{
-        //background-color: white;
         grid-column-start: 2;
         grid-column-end: 6;
-        //filter: drop-shadow(0 0 0.75rem #00000080);
         grid-row: 2;
         padding: 100px 0;
         h1{
@@ -192,6 +178,13 @@ $contactsBreakpointL2: 615px;
     }
 }
 
+iframe{
+    width: 70%;
+    height: 400px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
 
 #sign-up-row{
     display: grid;
@@ -251,141 +244,91 @@ $contactsBreakpointL2: 615px;
     }
 }
 
+
 @media only screen and(min-width: $contactsBreakpointL1){
     #contactos-row{
-        margin-top: 60px;
-        display: grid;
         grid-template-columns: auto 70% auto;
-    
-        #contactos{
-            grid-column: 2;
-    
-            h1{
-                text-align: center;
-            }
-            
-            #content{
-                display: grid;
-                grid-template-columns: calc(50%-40px) calc(50%-40px);
-                column-gap: 20px;
-    
-                .contact-card{
-                    background-color: white;
-                    filter: drop-shadow(0 0 0.3rem #36363680);
-                    padding: 30px 20px;
-                    border-radius: 10px;
-                    width: fit-content;
-    
-                    h3{
-                        margin-top: 0;
-    
-                        button{
-                            background: transparent;
-                            border: 0;
-                            font-size: 18px;
-                            transition: .3s;
-    
-                            &:hover{
-                                font-size: 22px;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    
-                }
-    
-                #europa{
-                    grid-column: 1;
-                }
-    
-                #internacional{
-                    grid-column: 2;
-                }
-            }
-    
-            #map {
-                width: 100%;
-                height: 400px;
-                background-color: grey;
-                margin-top: 20px;
-                border-radius: 10px;
-                filter: drop-shadow(0 0 0.3rem #36363680);
-            }
-             
+
+        #europa{
+            grid-column: 1;
         }
-    
+
+        #internacional{
+            grid-column: 2;
+        }
     }
 }
-
-
 
 @media only screen and(max-width: $contactsBreakpointL1)
     and(min-width: $contactsBreakpointL2){
     #contactos-row{
-        margin-top: 60px;
-        display: grid;
         grid-template-columns: auto 90% auto;
-    
-        #contactos{
-            grid-column: 2;
-    
-            h1{
-                text-align: center;
-            }
-            
-            #content{
-                display: grid;
-                grid-template-columns: calc(50%-40px) calc(50%-40px);
-                column-gap: 20px;
-    
-                .contact-card{
-                    background-color: white;
-                    filter: drop-shadow(0 0 0.3rem #36363680);
-                    padding: 30px 20px;
-                    border-radius: 10px;
-                    width: fit-content;
-    
-                    h3{
-                        margin-top: 0;
-    
-                        button{
-                            background: transparent;
-                            border: 0;
-                            font-size: 18px;
-                            transition: .3s;
-    
-                            &:hover{
-                                font-size: 22px;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    
-                }
-    
-                #europa{
-                    grid-column: 1;
-                }
-    
-                #internacional{
-                    grid-column: 2;
-                }
-            }
-    
-            #map {
-                width: 100%;
-                height: 400px;
-                background-color: grey;
-                margin-top: 20px;
-                border-radius: 10px;
-                filter: drop-shadow(0 0 0.3rem #36363680);
-            }
-             
+
+        #europa{
+            grid-column: 1;
         }
-    
+
+        #internacional{
+            grid-column: 2;
+        }
     }
 }
 
+#contactos-row{
+    margin-top: 60px;
+    display: grid;
+
+    #contactos{
+        grid-column: 2;
+
+        h1{
+            text-align: center;
+        }
+
+
+        #content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+            grid-template-rows: auto;
+            column-gap: 20px;
+
+            .contact-card{
+                background-color: white;
+                filter: drop-shadow(0 0 0.3rem #36363680);
+                padding: 30px 20px;
+                border-radius: 10px;
+                height: fit-content !important;
+
+                h3{
+                    margin-top: 0;
+
+                    button{
+                        background: transparent;
+                        border: 0;
+                        font-size: 18px;
+                        transition: .3s;
+
+                        &:hover{
+                            font-size: 22px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+            margin-top: 20px;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.3rem #36363680);
+        }
+    }
+}
 
 @media only screen and(max-width: $contactsBreakpointL2){
     #contactos-row{
@@ -393,136 +336,25 @@ $contactsBreakpointL2: 615px;
         display: grid;
         grid-template-columns: auto 90% auto;
     
-        #contactos{
-            grid-column: 2;
-    
-            h1{
-                text-align: center;
+        #content{
+            grid-template-columns: 100% !important;
+            grid-template-rows: auto auto !important;
+            row-gap: 20px;
+            column-gap: 0 !important;
+
+            .contact-card{
+                width: calc(100% - 40px);
+                
             }
-            
-            #content{
-                display: grid;
-                grid-template-columns: 100%;
-                grid-template-rows: auto auto;
-                row-gap: 20px;
-    
-                .contact-card{
-                    background-color: white;
-                    filter: drop-shadow(0 0 0.3rem #36363680);
-                    padding: 30px 20px;
-                    border-radius: 10px;
-                    width: fit-content;
-    
-                    h3{
-                        margin-top: 0;
-    
-                        button{
-                            background: transparent;
-                            border: 0;
-                            font-size: 18px;
-                            transition: .3s;
-    
-                            &:hover{
-                                font-size: 22px;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                    
-                }
-    
-                #europa{
-                    grid-row: 1;
-                }
-    
-                #internacional{
-                    grid-row: 2;
-                }
+
+            #europa{
+                grid-row: 1;
             }
-    
-            #map {
-                width: 100%;
-                height: 400px;
-                background-color: grey;
-                margin-top: 20px;
-                border-radius: 10px;
-                filter: drop-shadow(0 0 0.3rem #36363680);
-            }
-             
-        }
-    
-    }
-}
 
-
-
-#modal{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100vh;
-    z-index: 6;
-    
-    #modal-bg{
-        width: 100%;
-        height: 100%;
-        background-color: #292f36d0;
-    }
-
-    #form-container{
-        position: absolute;
-        transform-origin: center;
-        top: 10%;
-        left: 15%;
-        width: 70%;
-        background-color: white;
-        border-radius: 20px;
-        height: 80%;
-        transition: .3s;
-        transform: scale(0);
-        
-        h2{
-            background: linear-gradient(45deg, $blue, $greenishBlue);
-            width: calc(100% - 40px);
-            position: relative;
-            top: 0;
-            left: 0;
-            margin: 0;
-            padding: 20px;
-            border-radius: 20px 20px 0 0;
-            text-align: center;
-            color: white;
-        }
-        .input{
-            input{
-                width: calc(100% - 45px);
-                padding-left: 10px;
+            #internacional{
+                grid-row: 2;
             }
         }
-
-        #inputs{
-            margin: 40px;
-            overflow-y: auto;
-            overflow-x: none;
-
-            .row{
-                .input{
-                    margin: 10px 10px;
-                }
-        
-                .input:first-child{
-                    margin-left: 0px;
-                }
-        
-                .input:last-child{
-                    margin-right: 0px;
-                }
-            }
     
-            .btn{
-                margin-top: 20px;
-            }
-        }
     }
 }

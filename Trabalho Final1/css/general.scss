@@ -1,0 +1,141 @@
+//@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,600,800&display=swap');
+@import "colors";
+@import "navbar";
+@import "font-properties";
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #ebfaff;
+}
+
+.flex-display{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-vert{
+    flex-direction: column;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.hr{
+    width: 33%;
+    background-color: #333;
+    height: 2px;
+}
+
+.input-textarea{
+    height: 100px;
+    width: 100%;
+    margin: 30px 0px;
+
+    label{
+        position: relative;
+        left: 10px;
+        top: -115px;
+        transition: .3s;
+        font-size: 16px;
+    }
+
+    .icon{
+        position: relative;
+        width: 20px;
+        height: auto;
+        top: -30px;
+        left: 5px;
+    }
+
+    textarea{
+        font-family: 'Montserrat', sans-serif;
+        width: calc(100% - 20px);
+        height: 100%;
+        background: transparent;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px 10px;
+        resize: none;
+
+        &:invalid{
+            box-shadow: none;
+            border-bottom: 2px solid #c34040;
+        }
+
+        &:not(:placeholder-shown) ~ label{
+            top: -145px;
+            font-size: 12px;
+        }
+    }
+
+}
+
+
+
+.input{
+    height: 40px;
+    width: 100%;
+    margin: 30px 0px;
+
+    label{
+        position: relative;
+        left: 10px;
+        top: -35px;
+        transition: .3s;
+        font-size: 16px;
+    }
+
+    .icon{
+        position: relative;
+        width: 20px;
+        height: auto;
+        top: -30px;
+        left: 5px;
+    }
+
+    input, select{
+        width: calc(100% - 70px);
+        height: 100%;
+        background: transparent;
+        border: 0;
+        font-size: 16px;
+        outline: none;
+        border-bottom: 1px solid black;
+        padding: 0px 35px;
+
+        &:invalid{
+            box-shadow: none;
+            border-bottom: 2px solid #c34040;
+        }
+
+        &:not(:placeholder-shown) ~ label{
+            top: -60px;
+            font-size: 12px;
+        }
+    }
+}
+
+.btn{
+    width: 100%;
+    background: linear-gradient(45deg, $blue, $greenishBlue);
+    color: white;
+    padding: 10px 0px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .3s;
+
+    &:hover{
+        cursor: pointer;
+        font-weight: bold;
+        background-color: $darkBlue;
+        filter: drop-shadow(0 5px 0.1rem #36363640);
+    }
+}

@@ -1,0 +1,230 @@
+@media only screen and (min-width: 740px) {
+  .row {
+    grid-template-columns: auto 70% auto;
+  }
+  .row #gallery {
+    grid-template-columns: 50px auto 50px;
+  }
+  .row #gallery #navigate-left {
+    grid-column: 1;
+    grid-row: 1;
+    width: 50px;
+  }
+  .row #gallery #curr-img {
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.75rem #00000080);
+  }
+  .row #gallery #img {
+    grid-column: 2;
+  }
+  .row #gallery #navigate-right {
+    grid-row: 1;
+    grid-column: 3;
+    height: 100%;
+    width: 50px;
+  }
+  .row #gallery #navigation-btns {
+    display: none;
+  }
+
+  #header-container {
+    grid-template-columns: auto 70% auto;
+    grid-template-rows: 10vh 70vh 30vh;
+  }
+  #header-container #bg {
+    border-radius: 0 0 70% 70%/30%;
+  }
+}
+#header-container {
+  display: grid;
+}
+#header-container #bg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: linear-gradient(45deg, #3B5284f0, #5BA8A0f0), url(../img/visaoImg.png);
+}
+#header-container #meio {
+  grid-column: 2;
+  grid-row: 2;
+  color: white;
+  padding-bottom: 100px;
+}
+#header-container #meio .hr {
+  background-color: white;
+}
+#header-container #meio h1 {
+  font-weight: 800;
+}
+#header-container #meio p {
+  font-weight: 100;
+  text-align: justify;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 740px) {
+  .row {
+    grid-template-columns: auto 95% auto;
+  }
+  .row #gallery {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 50px;
+  }
+  .row #gallery #navigate-left,
+.row #gallery #navigate-right {
+    display: none;
+  }
+  .row #gallery #curr-img {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.75rem #00000080);
+  }
+  .row #gallery #navigation-btns {
+    grid-row: 2;
+  }
+  .row #gallery #navigation-btns button {
+    width: 50%;
+  }
+
+  #header-container {
+    grid-template-columns: auto 90% auto;
+    grid-template-rows: 10vh auto 30vh;
+  }
+  #header-container #bg {
+    border-radius: 0 0 70% 70%/10%;
+  }
+}
+#content {
+  margin-top: 60px;
+}
+#content .row {
+  width: 100%;
+  display: grid;
+  background: #14374da0;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+#content .row #gallery {
+  grid-column: 2;
+  display: grid;
+}
+#content .row #gallery button {
+  height: 50px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  background: transparent;
+  font-size: 20px;
+  font-weight: normal;
+  border: 0;
+  transition: 0.3s;
+  font-size: 32px;
+  color: white;
+}
+#content .row #gallery button:hover {
+  font-size: 40px;
+  cursor: pointer;
+}
+#content .row #gallery #bottom-nav {
+  margin: 10px 0;
+  justify-content: center;
+}
+#content .row #gallery #bottom-nav div {
+  width: 10px;
+  height: 10px;
+  background-color: #d5dce6;
+  border-radius: 100%;
+  margin: 5px 4px;
+  transform: translate(-50%);
+}
+#content .row #gallery #bottom-nav div:hover {
+  cursor: pointer;
+  background-color: #e5e9f0;
+}
+#content .row #gallery #bottom-nav .selected {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+.event-suggestion-row {
+  display: grid;
+  grid-template-columns: auto 60% auto;
+}
+.event-suggestion-row #meio {
+  grid-column: 2;
+}
+.event-suggestion-row #meio h3 {
+  text-align: center;
+}
+.event-suggestion-row #meio .btn {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 200px;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100vh;
+  z-index: 6;
+}
+#modal #modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #292f36d0;
+}
+#modal #form-container {
+  position: absolute;
+  transform-origin: center;
+  top: 10%;
+  left: 15%;
+  width: 70%;
+  background-color: white;
+  border-radius: 20px;
+  height: 80%;
+  transition: 0.3s;
+  transform: scale(0);
+}
+#modal #form-container h2 {
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+  width: calc(100% - 40px);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  color: white;
+}
+#modal #form-container .input input {
+  width: calc(100% - 45px);
+  padding-left: 10px;
+}
+#modal #form-container #inputs {
+  margin: 40px;
+  overflow-y: auto;
+  overflow-x: none;
+}
+#modal #form-container #inputs .row .input {
+  margin: 10px 10px;
+}
+#modal #form-container #inputs .row .input:first-child {
+  margin-left: 0px;
+}
+#modal #form-container #inputs .row .input:last-child {
+  margin-right: 0px;
+}
+#modal #form-container #inputs .btn {
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=eventos.css.map */

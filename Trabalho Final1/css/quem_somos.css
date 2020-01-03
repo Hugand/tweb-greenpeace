@@ -1,0 +1,288 @@
+@media only screen and (min-width: 740px) {
+  #header-container {
+    grid-template-columns: auto 70% auto;
+    grid-column: 1;
+    grid-template-rows: 20vh 80vh 30vh 10vh;
+  }
+  #header-container #meio {
+    grid-row: 2;
+    grid-template-columns: auto 40%;
+    column-gap: 70px;
+  }
+  #header-container #meio #header-content {
+    height: fit-content;
+    grid-column: 1;
+  }
+  #header-container #meio img {
+    grid-column: 2;
+    width: 300px;
+    height: 70%;
+  }
+
+  #visao {
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: auto 15% 15% 15% 15% auto;
+  }
+  #visao .text {
+    padding: 0 40px;
+  }
+
+  #sign-up-row {
+    grid-template-columns: auto 60% auto;
+  }
+}
+@media only screen and (max-width: 740px) {
+  #header-container {
+    grid-template-columns: auto 90% auto;
+    padding-top: 80px;
+  }
+  #header-container #meio {
+    grid-template-rows: auto auto;
+    row-gap: 50px;
+  }
+  #header-container #meio #header-content {
+    grid-row: 1;
+    height: fit-content;
+  }
+  #header-container #meio img {
+    grid-row: 2;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 100px;
+  }
+
+  #visao {
+    grid-template-columns: auto 22% 22% 22% 22% auto;
+  }
+  #visao .text {
+    padding: 0 20px;
+  }
+
+  #sign-up-row {
+    grid-template-columns: auto 90% auto;
+  }
+}
+#content {
+  display: grid;
+  grid-template-rows: 130vh 10vh auto;
+  grid-template-columns: 100%;
+  margin-top: 60px;
+}
+
+#header-container {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: linear-gradient(45deg, #3B5284f0, #5BA8A0f0), url(../img/iceBoat.jpg);
+  background-size: cover;
+}
+#header-container #meio {
+  grid-column: 2;
+  color: white;
+  height: fit-content;
+  display: grid;
+}
+#header-container #meio img {
+  object-fit: contain;
+  filter: drop-shadow(0 0 0.7rem #00000020);
+  -webkit-shape-outside: circle();
+  shape-outside: circle();
+  float: right;
+}
+#header-container #meio h1 {
+  margin-top: 0;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: right;
+}
+#header-container #meio h2 {
+  font-weight: 600;
+  text-align: justify;
+}
+#header-container #meio p {
+  font-weight: 100;
+  text-align: justify;
+}
+#header-container .hr {
+  background-color: white;
+  align-self: flex-end;
+}
+
+#visao {
+  margin-top: -200px;
+  display: grid;
+  margin-bottom: 100px;
+  border-top-right-radius: 200px;
+  grid-template-rows: 100px auto 50px auto 50px;
+  background-color: #ebfaff;
+}
+#visao #bg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background: linear-gradient(45deg, #3B5284, #5BA8A0), url(../img/iceBoat.jpg);
+}
+#visao #meio-visao {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row: 2;
+  padding: 100px 0;
+}
+#visao #meio-visao h1 {
+  margin-top: 0;
+  font-weight: 600;
+}
+#visao #meio-visao p {
+  font-weight: 300;
+  line-height: 24px;
+  margin: 20px 0;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+#visao img {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row: 4;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#sign-up-row {
+  display: grid;
+  z-index: -1 !important;
+  margin-top: 80px;
+}
+#sign-up-row #sign-up-form {
+  grid-column: 2;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 0.75rem #00000080);
+  background-color: white;
+}
+#sign-up-row #sign-up-form h2 {
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+}
+#sign-up-row #sign-up-form #form {
+  padding: 40px 20px;
+  padding-top: 20px;
+}
+#sign-up-row #sign-up-form #form .input input {
+  width: calc(100% - 45px);
+  padding-left: 10px;
+}
+#sign-up-row #sign-up-form #form .row {
+  height: auto;
+}
+#sign-up-row #sign-up-form #form .row .input {
+  margin: 0 10px;
+}
+#sign-up-row #sign-up-form #form .row .input:first-child {
+  margin-left: 0;
+}
+#sign-up-row #sign-up-form #form .row .input:last-child {
+  margin-right: 0;
+}
+#sign-up-row #sign-up-form #form .btn {
+  margin-top: 30px;
+  background: linear-gradient(45deg, #3B5284, #5BA8A0);
+}
+
+@media only screen and (min-width: 785px) {
+  #contactos-row {
+    grid-template-columns: auto 70% auto;
+  }
+  #contactos-row #europa {
+    grid-column: 1;
+  }
+  #contactos-row #internacional {
+    grid-column: 2;
+  }
+}
+@media only screen and (max-width: 785px) and (min-width: 615px) {
+  #contactos-row {
+    grid-template-columns: auto 90% auto;
+  }
+  #contactos-row #europa {
+    grid-column: 1;
+  }
+  #contactos-row #internacional {
+    grid-column: 2;
+  }
+}
+#contactos-row {
+  margin-top: 60px;
+  display: grid;
+}
+#contactos-row #contactos {
+  grid-column: 2;
+}
+#contactos-row #contactos h1 {
+  text-align: center;
+}
+#contactos-row #contactos #content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  grid-template-rows: auto;
+  column-gap: 20px;
+}
+#contactos-row #contactos #content .contact-card {
+  background-color: white;
+  filter: drop-shadow(0 0 0.3rem #36363680);
+  padding: 30px 20px;
+  border-radius: 10px;
+  height: fit-content !important;
+}
+#contactos-row #contactos #content .contact-card h3 {
+  margin-top: 0;
+}
+#contactos-row #contactos #content .contact-card h3 button {
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  transition: 0.3s;
+}
+#contactos-row #contactos #content .contact-card h3 button:hover {
+  font-size: 22px;
+  cursor: pointer;
+}
+#contactos-row #contactos #map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+  margin-top: 20px;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.3rem #36363680);
+}
+
+@media only screen and (max-width: 615px) {
+  #contactos-row {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto 90% auto;
+  }
+  #contactos-row #content {
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto auto !important;
+    row-gap: 20px;
+    column-gap: 0 !important;
+  }
+  #contactos-row #content .contact-card {
+    width: calc(100% - 40px);
+  }
+  #contactos-row #content #europa {
+    grid-row: 1;
+  }
+  #contactos-row #content #internacional {
+    grid-row: 2;
+  }
+}
+
+/*# sourceMappingURL=quem_somos.css.map */

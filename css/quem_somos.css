@@ -1,15 +1,6 @@
 @media only screen and (min-width: 740px) {
-  #content {
-    display: grid;
-    grid-template-rows: 130vh 10vh auto;
-    grid-template-columns: 100%;
-  }
-
   #header-container {
-    display: grid;
     grid-template-columns: auto 70% auto;
-    grid-row-start: 1;
-    grid-row-end: 3;
     grid-column: 1;
     grid-template-rows: 20vh 80vh 30vh 10vh;
   }
@@ -17,7 +8,6 @@
     grid-row: 2;
     grid-template-columns: auto 40%;
     column-gap: 70px;
-    height: fit-content;
   }
   #header-container #meio #header-content {
     height: fit-content;
@@ -39,21 +29,12 @@
   }
 
   #sign-up-row {
-    grid-template-columns: auto 40% auto;
+    grid-template-columns: auto 60% auto;
   }
 }
 @media only screen and (max-width: 740px) {
-  #content {
-    display: grid;
-    grid-template-rows: 130vh 10vh auto;
-    grid-template-columns: 100%;
-    margin-top: 60px;
-  }
-
   #header-container {
     grid-template-columns: auto 90% auto;
-    grid-row-start: 1;
-    grid-row-end: 3;
     padding-top: 80px;
   }
   #header-container #meio {
@@ -82,8 +63,17 @@
     grid-template-columns: auto 90% auto;
   }
 }
+#content {
+  display: grid;
+  grid-template-rows: 130vh 10vh auto;
+  grid-template-columns: 100%;
+  margin-top: 60px;
+}
+
 #header-container {
   display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
   background: linear-gradient(45deg, #3B5284f0, #5BA8A0f0), url(../img/iceBoat.jpg);
   background-size: cover;
 }
@@ -159,6 +149,14 @@
   border-radius: 5px;
 }
 
+iframe {
+  width: 70%;
+  height: 400px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 #sign-up-row {
   display: grid;
   z-index: -1 !important;
@@ -206,218 +204,93 @@
 
 @media only screen and (min-width: 785px) {
   #contactos-row {
-    margin-top: 60px;
-    display: grid;
     grid-template-columns: auto 70% auto;
   }
-  #contactos-row #contactos {
-    grid-column: 2;
-  }
-  #contactos-row #contactos h1 {
-    text-align: center;
-  }
-  #contactos-row #contactos #content {
-    display: grid;
-    grid-template-columns: calc(50%-40px) calc(50%-40px);
-    column-gap: 20px;
-  }
-  #contactos-row #contactos #content .contact-card {
-    background-color: white;
-    filter: drop-shadow(0 0 0.3rem #36363680);
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: fit-content;
-  }
-  #contactos-row #contactos #content .contact-card h3 {
-    margin-top: 0;
-  }
-  #contactos-row #contactos #content .contact-card h3 button {
-    background: transparent;
-    border: 0;
-    font-size: 18px;
-    transition: 0.3s;
-  }
-  #contactos-row #contactos #content .contact-card h3 button:hover {
-    font-size: 22px;
-    cursor: pointer;
-  }
-  #contactos-row #contactos #content #europa {
+  #contactos-row #europa {
     grid-column: 1;
   }
-  #contactos-row #contactos #content #internacional {
+  #contactos-row #internacional {
     grid-column: 2;
-  }
-  #contactos-row #contactos #map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-    margin-top: 20px;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 0.3rem #36363680);
   }
 }
 @media only screen and (max-width: 785px) and (min-width: 615px) {
   #contactos-row {
-    margin-top: 60px;
-    display: grid;
     grid-template-columns: auto 90% auto;
   }
-  #contactos-row #contactos {
-    grid-column: 2;
-  }
-  #contactos-row #contactos h1 {
-    text-align: center;
-  }
-  #contactos-row #contactos #content {
-    display: grid;
-    grid-template-columns: calc(50%-40px) calc(50%-40px);
-    column-gap: 20px;
-  }
-  #contactos-row #contactos #content .contact-card {
-    background-color: white;
-    filter: drop-shadow(0 0 0.3rem #36363680);
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: fit-content;
-  }
-  #contactos-row #contactos #content .contact-card h3 {
-    margin-top: 0;
-  }
-  #contactos-row #contactos #content .contact-card h3 button {
-    background: transparent;
-    border: 0;
-    font-size: 18px;
-    transition: 0.3s;
-  }
-  #contactos-row #contactos #content .contact-card h3 button:hover {
-    font-size: 22px;
-    cursor: pointer;
-  }
-  #contactos-row #contactos #content #europa {
+  #contactos-row #europa {
     grid-column: 1;
   }
-  #contactos-row #contactos #content #internacional {
+  #contactos-row #internacional {
     grid-column: 2;
   }
-  #contactos-row #contactos #map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-    margin-top: 20px;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 0.3rem #36363680);
-  }
 }
+#contactos-row {
+  margin-top: 60px;
+  display: grid;
+}
+#contactos-row #contactos {
+  grid-column: 2;
+}
+#contactos-row #contactos h1 {
+  text-align: center;
+}
+#contactos-row #contactos #content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  grid-template-rows: auto;
+  column-gap: 20px;
+}
+#contactos-row #contactos #content .contact-card {
+  background-color: white;
+  filter: drop-shadow(0 0 0.3rem #36363680);
+  padding: 30px 20px;
+  border-radius: 10px;
+  height: fit-content !important;
+}
+#contactos-row #contactos #content .contact-card h3 {
+  margin-top: 0;
+}
+#contactos-row #contactos #content .contact-card h3 button {
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  transition: 0.3s;
+}
+#contactos-row #contactos #content .contact-card h3 button:hover {
+  font-size: 22px;
+  cursor: pointer;
+}
+#contactos-row #contactos #map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+  margin-top: 20px;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.3rem #36363680);
+}
+
 @media only screen and (max-width: 615px) {
   #contactos-row {
     margin-top: 60px;
     display: grid;
     grid-template-columns: auto 90% auto;
   }
-  #contactos-row #contactos {
-    grid-column: 2;
-  }
-  #contactos-row #contactos h1 {
-    text-align: center;
-  }
-  #contactos-row #contactos #content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
+  #contactos-row #content {
+    grid-template-columns: 100% !important;
+    grid-template-rows: auto auto !important;
     row-gap: 20px;
+    column-gap: 0 !important;
   }
-  #contactos-row #contactos #content .contact-card {
-    background-color: white;
-    filter: drop-shadow(0 0 0.3rem #36363680);
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: fit-content;
+  #contactos-row #content .contact-card {
+    width: calc(100% - 40px);
   }
-  #contactos-row #contactos #content .contact-card h3 {
-    margin-top: 0;
-  }
-  #contactos-row #contactos #content .contact-card h3 button {
-    background: transparent;
-    border: 0;
-    font-size: 18px;
-    transition: 0.3s;
-  }
-  #contactos-row #contactos #content .contact-card h3 button:hover {
-    font-size: 22px;
-    cursor: pointer;
-  }
-  #contactos-row #contactos #content #europa {
+  #contactos-row #content #europa {
     grid-row: 1;
   }
-  #contactos-row #contactos #content #internacional {
+  #contactos-row #content #internacional {
     grid-row: 2;
   }
-  #contactos-row #contactos #map {
-    width: 100%;
-    height: 400px;
-    background-color: grey;
-    margin-top: 20px;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 0.3rem #36363680);
-  }
-}
-#modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100vh;
-  z-index: 6;
-}
-#modal #modal-bg {
-  width: 100%;
-  height: 100%;
-  background-color: #292f36d0;
-}
-#modal #form-container {
-  position: absolute;
-  transform-origin: center;
-  top: 10%;
-  left: 15%;
-  width: 70%;
-  background-color: white;
-  border-radius: 20px;
-  height: 80%;
-  transition: 0.3s;
-  transform: scale(0);
-}
-#modal #form-container h2 {
-  background: linear-gradient(45deg, #3B5284, #5BA8A0);
-  width: calc(100% - 40px);
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 20px;
-  border-radius: 20px 20px 0 0;
-  text-align: center;
-  color: white;
-}
-#modal #form-container .input input {
-  width: calc(100% - 45px);
-  padding-left: 10px;
-}
-#modal #form-container #inputs {
-  margin: 40px;
-  overflow-y: auto;
-  overflow-x: none;
-}
-#modal #form-container #inputs .row .input {
-  margin: 10px 10px;
-}
-#modal #form-container #inputs .row .input:first-child {
-  margin-left: 0px;
-}
-#modal #form-container #inputs .row .input:last-child {
-  margin-right: 0px;
-}
-#modal #form-container #inputs .btn {
-  margin-top: 20px;
 }
 
 /*# sourceMappingURL=quem_somos.css.map */
